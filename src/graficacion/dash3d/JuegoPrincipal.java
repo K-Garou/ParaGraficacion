@@ -7,14 +7,14 @@ import com.jogamp.opengl.util.FPSAnimator;
 
 public class JuegoPrincipal {
     
-    // --- VARIABLES DEL JUEGO (El estado de nuestro mundo) ---
+    // --- VARIABLES DEL JUEGO ---
     
     // 1. Variables del Cubo (Jugador)
     public float cuboY = 0.0f;       
     public float velocidadY = 0.0f;  
     public float gravedad = -0.03f;  
     
-    // 2. Variables del Escenario (La "Caminadora")
+    // 2. Variables del Escenario (La Caminadora)
     public float obstaculoX = 5.0f;  
     public float velocidadMapa = 0.11f; 
     
@@ -29,12 +29,11 @@ public class JuegoPrincipal {
     // 5. Variables de la Esfera Recolectable
     public int puntuacion = 0;              
     public boolean esferaActiva = true;     
-    // -------------------------------------
 
     // --- COMPONENTES DE LA VENTANA ---
     public JuegoPrincipal() {
-        // 1. Crear la ventana básica
-        JFrame frame = new JFrame("Geometry Dash 3D - Proyecto Gráficas");
+        // 1. Se crear la ventana básica
+        JFrame frame = new JFrame("Geometry Dash 3D - Proyecto Graficacion");
         frame.setSize(800, 600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         

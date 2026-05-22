@@ -5,7 +5,7 @@ import java.awt.event.KeyListener;
 
 public class Controles implements KeyListener {
     
-    // Necesitamos una referencia a la clase principal para poder modificar sus variables
+    // Referencia a la clase principal para poder modificar sus variables
     JuegoPrincipal padre;
 
     public Controles(JuegoPrincipal p) {
@@ -14,7 +14,6 @@ public class Controles implements KeyListener {
 
     @Override
     public void keyTyped(KeyEvent e) {
-        // No lo usamos, pero la interfaz KeyListener nos obliga a ponerlo
     }
 
     @Override
@@ -45,6 +44,5 @@ public class Controles implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent e) {
-        // Tampoco lo usamos en este juego
     }
 }

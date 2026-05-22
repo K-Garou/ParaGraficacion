@@ -17,7 +17,7 @@ public class MotorGrafico implements GLEventListener {
     private GLU glu = new GLU();
     private GLUT glut = new GLUT();
     
-    // --- NUESTRAS 4 TEXTURAS ---
+    // --- TEXTURAS ---
     private Texture texturaCubo;
     private Texture texturaPiso;
     private Texture texturaPiramide;
@@ -127,7 +127,6 @@ public class MotorGrafico implements GLEventListener {
         gl.glLoadIdentity();
         glu.gluLookAt(0.0, 2.0, 8.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0);
 
-        // Usaremos color blanco puro como base para que se vean los colores reales de las texturas
         float[] colorBlanco = {1.0f, 1.0f, 1.0f, 1.0f};
 
         // 1. DIBUJAR PISO TEXTURIZADO
@@ -145,7 +144,7 @@ public class MotorGrafico implements GLEventListener {
             gl.glTexCoord2f(0.0f, 10.0f);  gl.glVertex3f(-20.0f, -0.5f, -5.0f);
         gl.glEnd();
 
-        // 2. DIBUJAR JUGADOR TEXTURIZADO (Cubo manual para soportar texturas)
+        // 2. DIBUJAR JUGADOR TEXTURIZADO 
         float[] brilloTextura = {1.0f, 1.0f, 1.0f, 1.0f};
         gl.glMaterialfv(GL2.GL_FRONT, GL2.GL_SPECULAR, brilloTextura, 0); //original
         gl.glMaterialf(GL2.GL_FRONT, GL2.GL_SHININESS, 60.0f); //original
@@ -187,7 +186,7 @@ public class MotorGrafico implements GLEventListener {
 
         // 3. DIBUJAR PIRÁMIDES TEXTURIZADAS
         float[] sinBrillo = {0.0f, 0.0f, 0.0f, 1.0f}; // original
-        gl.glMaterialfv(GL2.GL_FRONT, GL2.GL_SPECULAR, sinBrillo, 0); // Mate original
+        gl.glMaterialfv(GL2.GL_FRONT, GL2.GL_SPECULAR, sinBrillo, 0); // original
         if (texturaPiramide != null) texturaPiramide.bind(gl);
         
         //float[] colorObstaculo = {0.7f, 0.0f, 0.0f, 1.0f}; // comentar
